@@ -1,4 +1,4 @@
-/* Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +7,15 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #e0e0e0, #ffffff);
-  color: #333;
   line-height: 1.6;
-  overflow-x: hidden;
+  color: #333;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
   scroll-behavior: smooth;
 }
 
 /* Header */
 header {
   position: relative;
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -42,51 +40,41 @@ header nav ul {
 header nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: bold;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
-  transition: background 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 header nav ul li a:hover {
   background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
 }
 
 header .hero h1 {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 header .hero p {
-  font-size: 1.5rem;
-  max-width: 700px;
-  margin: 1rem auto;
-  color: #d1e1ff;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 header .hero a {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 1rem 2.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
+  text-decoration: none;
   color: #1e3c72;
   background: #fff;
-  border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
 }
 
 header .hero a:hover {
+  background: #e3f2fd;
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* About Section */
@@ -96,52 +84,43 @@ header .hero a:hover {
 }
 
 #about h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #1e3c72;
   margin-bottom: 1rem;
 }
 
 #about p {
-  font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #666;
-  line-height: 1.8;
+  color: #555;
+  font-size: 1.1rem;
 }
 
-/* Glassmorphism Section (Portfolio) */
+/* Portfolio Section */
 #portfolio {
+  background: #f4f4f4;
   padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  background: linear-gradient(135deg, #ffffff, #f5f5f5);
-  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
 #portfolio h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #2a5298;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
 }
 
 .project {
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(15px);
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
@@ -151,9 +130,9 @@ header .hero a:hover {
 
 .project img {
   width: 100%;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 1rem;
 }
 
@@ -164,9 +143,8 @@ header .hero a:hover {
 }
 
 .project p {
-  color: #555;
   font-size: 1rem;
-  line-height: 1.6;
+  color: #555;
 }
 
 /* Contact Section */
@@ -178,13 +156,13 @@ header .hero a:hover {
 }
 
 #contact h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 form {
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -192,33 +170,27 @@ form {
 
 form input, form textarea {
   width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #333;
+  padding: 0.8rem;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form input:focus, form textarea:focus {
-  outline: 2px solid #2a5298;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
 }
 
 form button {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #1e3c72;
   font-weight: bold;
-  color: #fff;
-  background: #2a5298;
   border: none;
-  border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: background 0.3s, transform 0.3s;
 }
 
 form button:hover {
-  background: #1e3c72;
+  background: #e3f2fd;
   transform: translateY(-5px);
 }
 
@@ -226,7 +198,7 @@ form button:hover {
 footer {
   background: #1e3c72;
   color: #fff;
-  padding: 1.5rem 0;
+  padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
 }
@@ -240,17 +212,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   header .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   header .hero p {
-    font-size: 1.2rem;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
+    font-size: 1rem;
   }
 }
