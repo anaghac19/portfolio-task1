@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+}
+
+.wrapper {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+}
+
+.screen {
+    background-color: #1e1e2e;
+    color: #f8f9fa;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 2px solid #c2c2c2;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.calc-buttons {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+}
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calc-button {
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    border: none;
+    margin: 7px;
+    font-size: 1.8rem;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calc-button:hover {
+    background: linear-gradient(135deg, #cce0f5, #e8efff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.calc-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calc-button.double {
+    flex: 2;
+    font-weight: bold;
+}
+
+.calc-button.triple {
+    flex: 3;
+    font-weight: bold;
+}
+
+.calc-button:nth-child(3) {
+    background: linear-gradient(135deg, #3a89ff, #5aa3ff);
+    color: #ffffff;
+}
+
+.calc-button:nth-child(3):hover {
+    background: linear-gradient(135deg, #3269d4, #4783d6);
+}
+
+.calc-button:last-child {
+    background: linear-gradient(135deg, #ff7676, #ff9191);
+    color: #ffffff;
+}
+
+.calc-button:last-child:hover {
+    background: linear-gradient(135deg, #d95a5a, #e87373);
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <selection class="screen">
+            0
+        </selection>
+        <section class="calc-buttons">
+            <div class="calc-button-row">
+                <button class="calc-button double">
+                    C
+                </button>
+                <button class="calc-button">
+                    &larr;
+                </button>
+                <button class="calc-button">
+                    &divide;
+                </button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button">
+                    7
+                </button>
+                <button class="calc-button">
+                    8
+                </button>
+                <button class="calc-button">
+                    9
+                </button>
+                <button class="calc-button">
+                    &times;
+                </button>
+            </div> 
+            <div class="calc-button-row">
+                <button class="calc-button">
+                    4
+                </button>
+                <button class="calc-button">
+                    5
+                </button>
+                <button class="calc-button">
+                    6
+                </button>
+                <button class="calc-button">
+                    &minus;
+                </button>
+            </div> 
+            <div class="calc-button-row">
+                <button class="calc-button">
+                    1
+                </button>
+                <button class="calc-button">
+                    2
+                </button>
+                <button class="calc-button">
+                    3
+                </button>
+                <button class="calc-button">
+                    &plus;
+                </button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button triple">
+                    0
+                </button>
+                <button class="calc-button">
+                    &equals;
+                </button>
+            </div>
+        </section>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>
